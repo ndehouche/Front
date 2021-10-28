@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>EtherTrust -  Crypto Trust Fund</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=.6, maximum-scale=1>
+     
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="HandheldFriendly" content="true">
+  <meta charset="utf-8">
+
+  
+
+ <style type="text/css">
+  body {
+color: #536482;
+background-color: white;
+zoom: 125%;
+}
+    </style>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.6.1-rc.0/web3.min.js"></script>
+  <script src="script.js"></script>
+</head>
+
+<body>
+
+
+
+<div  class="mx-auto" style="width: 500px;">
+<h1 class="text-center">
+    <img src="image.png" width="100" height="120" class="d-inline-block align-top" alt="">
+</h1>
+<h1 class="logo">
+EtherTrust </h1>
+<h4 class="text-center"> Crypto Trust Fund</h4>
+</div>
+
+<div class="container" style="width: 600px;">
+  <div class="row">
+    <div class="col">
+      <p> Create an Ethereum trust fund for your loved ones with <a href="https://EthWill.com">EthWill.com</a>. Cancel it anytime. 
+        is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset shee</p>
+
+    </div>
+    <div class="col">
+      <p> Execute other people's wills and get paid Eth for just one click.is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset shee </p>
+
+    </div>
+  </div>
+</div>
+
+<div  class="mx-auto" style="width: 500px;">
+
+
+<div class="buttons">
+    <button id="wallet-button" class="btn-hover color-8">Connect Wallet</button>
+</div>
+
+  </div>
+  <hr>
+  <div  class="mx-auto" style="width: 500px">
+<h2 class="text-center">Interact with the Contract</h2>
+    <button type="button" class="collapsible color-8">Create a will</button>
+    <div class="content" style="width: 500px">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+    <button type="button" class="collapsible color-8">I am alive!</button>
+    <div class="content" style="width: 500px">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+
+
+    <button type="button" class="collapsible color-8">Change Value</button>
+    <div class="content" style="width: 500px">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+
+    <button type="button" class="collapsible color-8">Change Reward</button>
+    <div class="content" style="width: 500px">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+
+    <button type="button" class="collapsible color-8">Change Beneficiary</button>
+    <div class="content" style="width: 500px">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+
+    <button type="button" class="collapsible color-8">Change Maturity</button>
+    <div class="content" style="width: 500px">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+
+    <button type="button" class="collapsible color-8">Execute a Will</button>
+    <div class="content" style="width: 500px">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+
+    <button type="button" class="collapsible color-8">Cancel a Will</button>
+    <div class="content" style="width: 500px">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+
+   
+    
+  </div>
+ 
+  <script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+    
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      });
+    }
+    </script>
+
+<!-- partial -->
+  <hr>
+</body>
+
+<footer>
+  <div  class="mx-auto" style="width: 500px">
+  <p class="text-center">Created by <a href="https://twitter.com/ndehouche">@ndehouche</a>.</p>
+  <div></div>
+</footer>
+</html>
