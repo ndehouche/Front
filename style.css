@@ -1,3 +1,35 @@
+body {
+	background: linear-gradient(to bottom,  rgb(255, 255, 255) 15%, #c4e0fa 50%,  #c4e0fa 35%);
+	background-size: 100% 400%;
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
 * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -19,8 +51,8 @@
 }
 
 .collapsible.color-8 {
-  background-image: linear-gradient(to right, #bebcc0, #485563, #2b5876, #4e4376);
-  box-shadow: 0 4px 15px 0 rgba(233, 234, 235, 0.75);
+  background-image: linear-gradient(to right, #dedddf, #485563, #2b5876, #4e4376);
+  box-shadow: 0 4px 15px 0 rgba(163, 163, 163, 0.75);
 }
 
 .collapsible   {
@@ -75,6 +107,48 @@ transition: all .4s ease-in-out;
     transition: all .4s ease-in-out;
 }
 
+
+.nonpayable-hover, .payable-hover {
+    width: 150px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    margin: 20px;
+    height: 35px;
+    text-align:center;
+    border: none;
+    background-size: 300% 100%;
+
+    border-radius: 50px;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+.nonpayable-hover:hover, .payable-hover:hover {
+    background-position: 100% 0;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+.nonpayable-hover:focus, .payable-hover:focus {
+    outline: none;
+}
+.payable-hover.color-8 {
+    background-image: linear-gradient(to right, #fc3f3f, #ff2a2a, #ff2a2a, #2b5876);
+    box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
+}
+
+.nonpayable-hover.color-8 {
+    background-image: linear-gradient(to right,#ffad3b, #ff9100, #ff9100, #2b5876);
+    box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
+}
+
+
+
+
 .btn-hover:hover {
     background-position: 100% 0;
     moz-transition: all .4s ease-in-out;
@@ -86,10 +160,17 @@ transition: all .4s ease-in-out;
 .btn-hover:focus {
     outline: none;
 }
-
+.interact-hover:focus {
+    outline: none;
+}
 
 .btn-hover.color-8 {
     background-image: linear-gradient(to right, #29323c, #485563, #2b5876, #4e4376);
+    box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
+}
+
+.interact-hover.color-8 {
+    background-image: linear-gradient(to right, #ff2a2a, #485563, #ff2a2a, #2b5876);
     box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
 }
 
@@ -116,9 +197,9 @@ a:hover {
 
 .logo {
   text-align:center;
-	background: linear-gradient(to bottom, #30CFD0 0%, #330867 100%);
+	background: linear-gradient(to right, #30CFD0 0%, #330867 85%);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
-  font-size: 3vw;
-  font-family: 	'poppins';;
+  font-size: 35px;
+  font-family: 	'ubuntu';
 }
