@@ -34,24 +34,31 @@ zoom: 125%;
 <div  class="mx-auto" style="width: 100%;">
 <h1 class="text-center">
 
-    <img src="image.png" width="100px" class="d-inline-block align-top" alt="">
+    <img src="image.png" width="80px" class="d-inline-block align-top" alt="">
 </h1>
 <h1 class="logo">
 EtherTrust </h1>
-<h5 class="text-center"> Crypto Trust Fund</h5>
+<h4  style="text-align:center"> Crypto Trust Fund</h4>
 </div>
-<div class="container" style="width: 600px;">
-  <div class="row">
+<br>
+<div class="container" style="width: 500px;">
+  
+   <div class="row">
     <div class="col">
-      <p> Create an Ethereum trust fund for your loved ones with <a href="https://EtherTrust">EtherTrust.com</a>. Cancel it anytime. 
-        is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset shee</p>
+      <h5  style="text-align:center"> 📝 Testator</h5>
+      <p  align="justify"> Create an Ethereum trust fund for your loved ones. Your will does not get executed unless you fail to give sign of life before the contract's maturity. Cancel it anytime. Leave a small reward to for future executors.</p>
 
     </div>
     <div class="col">
-      <p> Execute other people's wills and get paid Eth for just one click.is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset shee </p>
+      <h5  style="text-align:center"> ⚙️ Executor</h5>
+      <p align="justify"> Execute other people's wills once they reach maturity and receive a reward in Eth for just one click. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rutrum in dui ac feugiat. In nulla quam aliquam.
+        </p>
 
     </div>
   </div>
+
+</div>
+  
 
 <div  class="mx-auto" style="width: 500px;">
 <div class="buttons">
@@ -64,6 +71,15 @@ EtherTrust </h1>
 
   <div  id="div-interact" class="mx-auto" style="width: 500px; display: none">
 <h4 class="text-center">Interact with the Contract</h4>
+<div class="row">
+<div class="col">
+<p style="text-align:right">🟥 Payable</p>
+</div>
+<div class="col">
+<p style="text-align:left">🟧 Non-payable</p>
+</div>
+</div>
+
     <button type="button" class="collapsible color-8" >Create a will</button>
    
     <div class="content" style="width: 500px">
@@ -79,7 +95,7 @@ EtherTrust </h1>
     <button type="button" class="collapsible color-8">I am alive!</button>
 <div class="content" style="width: 500px">
        <br>
-            <label> Give a sign of life and reset the timers of all the will you have created:</label>
+            <label> Give a sign of life and reset the timers of all the wills you have created:</label>
             <div class="buttons">
             <button id="alive-button" class="nonpayable-hover color-8">I am alive!</button>
            </div>
@@ -98,7 +114,7 @@ EtherTrust </h1>
 
     <button type="button" class="collapsible color-8">Change Value</button>
     <div class="content" style="width: 500px">
-       <br>   <input class="form-control" id="idv" type=number placeholder="Index of a will of yours whose value you want to change.">
+       <br>   <input class="form-control" id="idv" type=number placeholder="Index of a will of yours whose value you want to change">
               <input class="form-control" id="decreasev" type=number placeholder="Amount of change in wei. Can be negative for decrease">
             <div class="buttons">
             <button id="value-button" class="payable-hover color-8">Change Value</button>
@@ -107,7 +123,7 @@ EtherTrust </h1>
 
     <button type="button" class="collapsible color-8">Change Reward</button>
     <div class="content" style="width: 500px">
-       <br>   <input class="form-control" id="idr" type=number placeholder="Index of a will of yours whose reward you want to change.">
+       <br>   <input class="form-control" id="idr" type=number placeholder="Index of a will of yours whose reward you want to change">
               <input class="form-control" id="decreaser" type=number placeholder="Amount of change in wei. Can be negative for decrease">
             <div class="buttons">
             <button id="reward-button" class="payable-hover color-8">Change Reward</button>
@@ -116,7 +132,7 @@ EtherTrust </h1>
 
     <button type="button" class="collapsible color-8">Change Beneficiary</button>
    <div class="content" style="width: 500px">
-       <br>   <input class="form-control" id="idb" type=number placeholder="Index of a will of yours whose beneficiary you want to change.">
+       <br>   <input class="form-control" id="idb" type=number placeholder="Index of a will of yours whose beneficiary you want to change">
               <input class="form-control" id="newbeneficiary" placeholder="Address of new beneficiary">
             <div class="buttons">
             <button id="beneficiary-button" class="nonpayable-hover color-8">Change Beneficiary</button>
@@ -125,7 +141,7 @@ EtherTrust </h1>
 
     <button type="button" class="collapsible color-8">Change Maturity</button>
     <div class="content" style="width: 500px">
-       <br>   <input class="form-control" id="idm" type=number placeholder="Index of a will of yours whose maturity you want to change.">
+       <br>   <input class="form-control" id="idm" type=number placeholder="Index of a will of yours whose maturity you want to change">
               <input class="form-control" id="newmaturity" type=number placeholder="New maturity">
             <div class="buttons">
             <button id="maturity-button" class="nonpayable-hover color-8">Change Maturity</button>
@@ -136,7 +152,7 @@ EtherTrust </h1>
     <div class="content" style="width: 500px">
        <br>   
        <input class="form-control" id="exectestator"  placeholder="Address of the testator whose mature will you want to execute">
-       <input class="form-control" id="ide" type=number placeholder="Index of the mature will you want to execute.">
+       <input class="form-control" id="ide" type=number placeholder="Index of the mature will you want to execute">
               
             <div class="buttons">
             <button id="execute-button" class="nonpayable-hover color-8">Execute Will</button>
@@ -147,9 +163,23 @@ EtherTrust </h1>
     
     <button type="button" class="collapsible color-8">See all mature wills</button>
     <div class="content" style="width: 500px">
-      <br>
-      <p>To do.</p>
-    </div>
+       <br>
+            <label> Click the button to list all mature wills:</label>
+            <div class="buttons">
+            <button id="list-button" class="nonpayable-hover color-8">Get all wills</button>
+             </div>
+            <div class="allWills" id="willsDiv">
+              <table id="willsTable" style="width: 100%;margin: 0 auto;"" >
+              <tr >
+               <th>Testator</th>
+               <th>Index</th>
+               <th>Reward</th>
+              </tr>
+              </table>
+
+            </div>
+<br>
+        </div>
 
 
    
@@ -158,9 +188,8 @@ EtherTrust </h1>
  
   <script>
     var coll = document.getElementsByClassName("collapsible");
-    var i;
     
-    for (i = 0; i < coll.length; i++) {
+    for (var i = 0; i < coll.length; i++) {
       coll[i].addEventListener("click", function() {
         this.classList.toggle("active");
         var content = this.nextElementSibling;

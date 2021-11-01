@@ -1,7 +1,7 @@
 body {
 	background: linear-gradient(to bottom,  rgb(255, 255, 255) 15%, #c4e0fa 50%,  #c4e0fa 35%);
 	background-size: 100% 400%;
-	height: 100vh;
+	height: 80vh;
 }
 
 @keyframes gradient {
@@ -42,14 +42,16 @@ body {
     text-align: center;
 }
 
-.content {
+.content, .allWills {
   margin: 0 auto;
   padding: 0 20px;
   display: none;
   overflow: hidden;
   background-color: #f3f3f3;
 }
-
+.allWills{
+ background-color: #ffffff; 
+}
 .collapsible.color-8 {
   background-image: linear-gradient(to right, #cac8cc, #485563, #2b5876, #4e4376);
   box-shadow: 0 4px 15px 0 rgba(163, 163, 163, 0.75);
@@ -191,7 +193,10 @@ a:hover {
 
 
 
-
+input::-webkit-input-placeholder {
+    font-size: 14px;
+    line-height: 3;
+}
 
 
 
@@ -202,4 +207,9 @@ a:hover {
 	-webkit-text-fill-color: transparent;
   font-size: 35px;
   font-family: 	'ubuntu';
+}
+
+td, tr {
+  text-align: center;
+  font-size: 12px;
 }
