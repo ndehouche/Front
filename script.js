@@ -1,5 +1,5 @@
-function addRows(_testator, id, _reward) {
-  var table=document.getElementById('willsTable');
+function addRows(name, _testator, id, _reward) {
+  var table=document.getElementById(name);
       row = table.insertRow(-1);
       
       cell1 = row.insertCell(0),
@@ -10,8 +10,8 @@ function addRows(_testator, id, _reward) {
   cell2.innerHTML = id;
   cell3.innerHTML = _reward;
 }
-function DeleteRows() {
-  var table=document.getElementById('willsTable');
+function DeleteRows(name) {
+  var table=document.getElementById(name);
         var rowCount = table.rows.length;
         for (var i = rowCount - 1; i > 0; i--) {
             table.deleteRow(i);
@@ -582,32 +582,67 @@ async function connectWallet(){
     _id=document.getElementById("ide").value; 
     await EtherTrust.methods.executeWill(_testator, _id).send({from: ethereum.selectedAddress, to:contractAddress});
     }
-  
+
+
+    const yourWills=document.getElementById('wills-button');
+    yourWills.onclick = async ()=> {
+    checkConnected();   
+    
+    DeleteRows('yourwillsTable');
+       
+   
+       var testator=accounts[0];
+       
+       var creaDate=await EtherTrust.methods.lastAlive(testator).call();
+      
+      if (creaDate!=0){
+       
+       var wills=await EtherTrust.methods.getWills(testator).call();
+       
+       
+        for (var j=0;j<wills.length;j++){
+         
+          
+          //checks if will is mature
+         
+          //to do: check that this j corresponds to the index of the testator's will in all cases (deletion, etc.)
+          addRows('yourwillsTable', wills[j][3], wills[j][0], wills[j][1]);
+          
+
+         }
+     
+      document.getElementById('wills-button').innerHTML="Refresh";
+      document.getElementById('yourWills').style.display='block';
+      
+      }
+
+
+    }
+
   const list=document.getElementById('list-button');
     list.onclick = async ()=> {
     checkConnected();   
     
     EtherTrust.methods.numTestators().call(async function(err, num){
      if(!err){
-   DeleteRows();
+   DeleteRows('willsTable');
        
      for (i=0;i<num;i++){//loops through all testators
        var testator=await EtherTrust.methods.testators(i).call();
-       console.log(testator);
+       
        var creaDate=await EtherTrust.methods.lastAlive(testator).call();
-       console.log(creaDate);
+      
        
        var wills=await EtherTrust.methods.getWills(testator).call();
-       console.log(wills);
+       
        var now = (await web3.eth.getBlock(await web3.eth.getBlockNumber())).timestamp;
         for (var j=0;j<wills.length;j++){
-          console.log(now);
+         
           if (parseInt(now)>parseInt(creaDate)+parseInt(wills[j][2])){
           //checks if will is mature
-          console.log(wills[j][1]);
-          console.log(wills[j][3]);
+         
           //to do: check that this j corresponds to the index of the testator's will in all cases (deletion, etc.)
-          addRows(wills[j][3], j, wills[j][1]);
+          addRows('willsTable', wills[j][3], j, wills[j][1]);
           }
 
          }
